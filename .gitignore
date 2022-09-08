@@ -1,0 +1,9 @@
+# Mac OS
+
+.DS_Store
+
+
+#coverage
+
+.coverage
+__pycache__
