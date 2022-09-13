@@ -1,13 +1,17 @@
 import unittest
 
-#import main
+import HelloCV
 
 
-#class MainTest(unittest.TestCase):
-#    def test_helloworld(self):
-#        ret = main.helloworld("Test")
-#        self.assertEqual(ret, "Hello World! Test!")
+class MainTest(unittest.TestCase):
+    def test_HelloCV(self):
+        ret = HelloCV.vcheck()
+        self.assertEqual(ret, "hello, openCV4.6.0")
 
 
-#if __name__ == "__main__":
-#    unittest.main()
+if __name__ == "__main__":  # pragma: no cover
+    unittest.main()
+    # python -m unittest discover -p "*_test.py"
+    # -> unit test 실행
+    # coverage run --source=./ -m unittest discover -p "*_test.py"
+    # coverage xml
