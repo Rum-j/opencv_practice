@@ -5,7 +5,7 @@ import cv2 as cv
 import numpy as np
 
 
-def main(argv):
+def line_detect(argv):
 
     default_file = 'Arla-Standard-Milk_019.jpg'
     print(default_file)
