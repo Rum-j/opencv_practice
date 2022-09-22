@@ -1,11 +1,11 @@
 import unittest
 
-import HelloCV
+from HelloCV import vcheck
 
 
 class MainTest(unittest.TestCase):
     def test_HelloCV(self):
-        ret = HelloCV.vcheck()
+        ret = vcheck()
         self.assertEqual(ret, "hello, openCV4.6.0")  # openCV version check
 
 
