@@ -6,11 +6,13 @@ def vcheck():
     return "hello, openCV" f"{cv2.__version__}"
 
 
-img = cv2.imread('cat.bmp')
+img = cv2.imread('cat.bmp', flags=cv2.IMREAD_GRAYSCALE)
 
 if img is None:  # 이미지를 불러올 수 없는 경우에 대한 방어
     print('Image load failed')
     sys.exit()
+
+cv2.imwrite('cat_grey.png', img)
 
 cv2.namedWindow('image')
 cv2.imshow('image', img)

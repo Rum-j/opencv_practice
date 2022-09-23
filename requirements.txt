@@ -2,3 +2,4 @@ black==22.8.0
 coverage==4.3
 codeclimate-test-reporter==0.2.3
 wheel==0.37.1
+openCV==4.6.0
