@@ -14,7 +14,8 @@ if img is None:  # 이미지를 불러올 수 없는 경우에 대한 방어
 
 cv2.imwrite('cat_grey.png', img)
 
-cv2.namedWindow('image')
+cv2.namedWindow('image', cv2.WINDOW_AUTOSIZE) # default = autosize
+cv2.moveWindow('image', 800, 200) # window의 위치 지정
 cv2.imshow('image', img)
 cv2.waitKey()  # 키보드 입력이 들어올 때까지 기다리기
 
