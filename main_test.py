@@ -1,7 +1,9 @@
+from sys import argv
 import unittest
 
 from HelloCV import vcheck
 from houghline_example import line_detect
+
 
 class MainTest(unittest.TestCase):
     def test_HelloCV(self):
@@ -11,7 +13,7 @@ class MainTest(unittest.TestCase):
 
 class line_detect(unittest.TestCase):
     def test_line_detect(self):
-        ret = line_detect()
+        ret = line_detect(argv)
         self.assertEqual(ret)
 
 

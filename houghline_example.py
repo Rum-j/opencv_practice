@@ -1,4 +1,4 @@
-#refereces: t.ly/WRIuY
+# refereces: t.ly/WRIuY
 import sys
 import math 
 import cv2 as cv
@@ -16,7 +16,7 @@ def line_detect(argv):
     # load success check
     if src is None:
         print('Error opening image')
-        print('Usage: houghline_example.py'+ default_file)
+        print('Usage: houghline_example.py' + default_file)
         return -1
 
     dst= cv.Canny(src, 90, 190, None, 3) # optimized in milk 019
@@ -35,19 +35,19 @@ def line_detect(argv):
             b = math.sin(theta)
             x0 = a * rho
             y0 = b * rho
-            pt1 = (int(x0 + 1000*(-b)), int(y0 + 1000*(a)))
-            pt2 = (int(x0 - 1000*(-b)), int(y0 - 1000*(a)))
-            cv.line(cdst, pt1, pt2, (0,0,255), 2, cv.LINE_AA)
+            pt1 = (int(x0 + 1000*( - b)), int(y0 + 1000*(a)))
+            pt2 = (int(x0 - 1000*( - b)), int(y0 - 1000*(a)))
+            cv.line(cdst, pt1, pt2, (0, 0, 255), 2, cv.LINE_AA)
     
 
     linesP = cv.HoughLinesP(dst, 1, np.pi/180, 50, None, 50, 10)
 
     if linesP is not None:
         for i in range(0, len(linesP)):
-            l = linesP[i][0]
-            if i%10 == 1: # 10번에 한번씩 
-                print("linesP", linesP[i], l)  # linesP 출력
-            cv.line(cdstP, (l[0], l[1]), (l[2], l[3]), (0,0,255), 2, cv.LINE_AA) 
+            li = linesP[i][0]
+            if i % 10 == 1: # 10번에 한번씩 
+                print("linesP", linesP[i], li)  # linesP 출력
+            cv.line(cdstP, (li[0], li[1]), (li[2], li[3]), (0, 0, 255), 2, cv.LINE_AA) 
 
     cv.imshow("Source", src)
     cv.imshow("detected lines in red - Standard hough line transform", cdst)
@@ -57,5 +57,7 @@ def line_detect(argv):
 
     return 0
 
-if __name__ == "__main__": # pragma: no cover
+
+if __name__ == "__main__":  # pragma: no cover
     line_detect(sys.argv[1:])
+    
