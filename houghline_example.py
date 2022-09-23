@@ -8,7 +8,6 @@ import numpy as np
 def line_detect(argv):
 
     default_file = 'Arla-Standard-Milk_019.jpg'
-    print(default_file)
     filename = argv[0] if len(argv) > 0 else default_file
 
     #load image
@@ -59,5 +58,5 @@ def line_detect(argv):
 
     return 0
 
-if __name__ == "__main__":
-    main(sys.argv[1:])
+if __name__ == "__main__": # pragma: no cover
+    line_detect(sys.argv[1:])
