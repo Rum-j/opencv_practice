@@ -10,14 +10,16 @@ file_list = os.listdir('./')
 
 # glob으로 불러오기 
 img_files = glob.glob('./*.png') # 특정 패턴의 문자열로 되어있는 file name을 불러오기
-
+if not img_files: # if empty folder
+    print('there are no png files')
+    sys.exit()
 
 for f in img_files:
     print(f)
 
 
 cv2.namedWindow('image', cv2.WINDOW_NORMAL)
-cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN
+cv2.setWindowProperty('image', cv2.WND_PROP_FULLSCREEN,
                       cv2.WINDOW_FULLSCREEN)
 
 cnt = len(img_files) # 이미지 개수만큼 순환
@@ -30,3 +32,6 @@ while True:
     idx += 1
     if idx >= cnt:
         idx =0 # initialize
+
+
+cv2.destroyAllWindows()
