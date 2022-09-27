@@ -1,17 +1,15 @@
 from sys import argv
 import unittest
 
-from HelloCV import vcheck
+from hello_cv import vcheck
 from houghline_example import line_detect
 
 
 class MainTest(unittest.TestCase):
-    def test_HelloCV(self):
+    def test_hellocv(self):
         ret = vcheck()
         self.assertEqual(ret, "hello, openCV4.6.0")  # openCV version check
-
-
-class line_detect(unittest.TestCase):
+        class line_detect(unittest.TestCase):
     def test_line_detect(self):
         ret = line_detect(argv)
         self.assertEqual(ret)

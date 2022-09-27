@@ -13,4 +13,6 @@
       "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true,
       },
+      "python.linting.pylintEnabled": true,
+      "python.linting.enabled": true,
 }

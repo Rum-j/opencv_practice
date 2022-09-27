@@ -27,7 +27,7 @@ img5 = cv2.imread(ch2_path+'HappyFish.jpg')
 print(img5.shape)
 
 img6 = img5 # 이름만 다른 복사, 참조
-img7 = img5.copy() # 새로운 복사본 생성
+img7 = img5.copy() # 새로운 복사본 생성, 메모리를 새롭게 할당
 img5[50:150, :100] = (0, 0, 0)
 
 
@@ -43,3 +43,4 @@ cv2.destroyAllWindows
 # 부분 영상 추출
 
 img6 = img5[:,:].copy()
+cv2
