@@ -16,7 +16,7 @@ def create_4(x, y):  # int int
     cv2.imshow("image4", img4)
     cv2.waitKey()
 
-    cv2.destroyAllWindows
+    cv2.destroyAllWindows()
 
 
 # copy images
