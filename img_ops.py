@@ -33,11 +33,12 @@ cv2.imshow("copy", img6)
 cv2.imshow("copied by function", img7)
 
 
-cv2.waitKey()
-cv2.destroyAllWindows
-
-
 # 부분 영상 추출
 
 img6 = img5[:, :].copy()
-cv2
+cv2.circle(img6, (100, 100), 20, (0, 120, 120), 2)
+
+cv2.imshow("circle", img6)
+
+cv2.waitKey()
+cv2.destroyAllWindows()
