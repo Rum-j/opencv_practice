@@ -9,7 +9,8 @@ file_list = os.listdir("./")
 # img_files = [file for file in file_list if file.endswith('.jpg')]
 
 # glob으로 불러오기
-img_files = glob.glob("./*.png")  # 특정 패턴의 문자열로 되어있는 file name을 불러오기
+img_files = glob("./*.png")  # 특정 패턴의 문자열로 되어있는 file name을 불러오기
+# glob.glob에서 왜 이거여야되는지는 잘..
 if not img_files:  # if empty folder
     print("there are no png files")
     sys.exit()

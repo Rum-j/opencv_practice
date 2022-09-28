@@ -3,3 +3,5 @@ coverage==4.3
 codeclimate-test-reporter==0.2.3
 wheel==0.37.1
 opencv-python
+numpy
+matplotlib
