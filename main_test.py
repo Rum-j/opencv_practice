@@ -13,4 +13,4 @@ if __name__ == "__main__":  # pragma: no cover
     # python -m unittest discover -p "*_test.py"
     # -> unit test 실행
     # coverage run --source=./ -m unittest discover -p "*_test.py"
-    # coverage xml
+    # coverage xml (no source for 어쩌구 뜬다면 -i 옵션 추가)

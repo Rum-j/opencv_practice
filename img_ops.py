@@ -1,6 +1,7 @@
 import numpy as np
 import cv2
 
+
 ch2_path = "/Users/krc/Documents/opencv/ch02/"
 # 영상의 생성, 복사, 부분 추출
 # create images
